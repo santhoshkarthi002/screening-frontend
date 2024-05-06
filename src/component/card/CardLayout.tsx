@@ -7,12 +7,12 @@ export const CardLayout = ({ list }: { list: AppointmentListProps }) => {
         <div className="flex flex-col justify-between p-4 leading-normal">
           <div className="flex gap-2 mb-2 items-center">
             <h5 className=" items-center gap-5  text-[15px] font-bold tracking-tight text-[#48484e] dark:text-white">
-              {list.patient_name}
+              {list.patient_name} 
+              <span  className="ml-2 text-[11px] tracking-tight text-gray-400 dark:text-gray-400"> 
+              (+{list.mobile_number})
+          </span>
             </h5>
-            <span className="h-fit  px-4 py-1 text-sm text-gray-600 bg-[#e4ecf7] w-fit rounded-md font-bold">
-              {list.injury}
-            </span>
-          </div>
+                 </div>
           <div className="flex items-center mb-3  text-gray-700 dark:text-gray-400 ">
           {list?.patient_name === "John Doe" ||
               list?.patient_name === "Jane Smith" ? (
@@ -29,7 +29,10 @@ export const CardLayout = ({ list }: { list: AppointmentListProps }) => {
                 />
               )}
             <div className="text-gray-500 font-bold text-[14px] whitespace-nowrap   dark:text-gray-400">
-              {list.doctor} <span  className="text-[11px] tracking-tight text-gray-400 dark:text-gray-400"> (+{list.mobile_number})
+              {list.doctor} <span  className="text-[11px] tracking-tight text-gray-400 dark:text-gray-400"> 
+              <span className="h-fit  px-4 py-1 text-sm text-gray-600 bg-[#e4ecf7] w-fit rounded-md font-bold">
+              {list.injury}
+            </span>
           </span>
             </div>
           </div>
@@ -46,7 +49,7 @@ export const CardLayout = ({ list }: { list: AppointmentListProps }) => {
             </div>
           </div>
         </div>
-        <div className="flex bg-blue-500 font-bold h-12 text-white w-12 rounded-full items-center justify-center">
+        <div className="hidden xs:flex bg-blue-500 font-bold h-12 text-white w-12 rounded-full items-center justify-center">
           {stringAvatar(list.patient_name)}
         </div>
       </div>
