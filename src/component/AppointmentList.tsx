@@ -177,7 +177,7 @@ export const AppointmentList = () => {
         </div>
         <div className="block sm:hidden space-y-2 ">
           {listData.map((list, index) => {
-            return <CardLayout key={index} list={list} />;
+            return <CardLayout key={index} list={list} isLoading={loading}/>;
           })}
         </div>
       </div>
