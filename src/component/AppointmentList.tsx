@@ -175,7 +175,7 @@ export const AppointmentList = () => {
             <TableBody tableColumn={tableColumn} listData={listData} isLoading={loading}/>
           </table>
         </div>
-        <div className="block sm:hidden space-y-1">
+        <div className="block sm:hidden space-y-2 ">
           {listData.map((list, index) => {
             return <CardLayout key={index} list={list} />;
           })}
