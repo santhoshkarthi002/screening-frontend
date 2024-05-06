@@ -131,9 +131,9 @@ export const AppointmentList = () => {
       id: 5,
       name: "injury",
       label: "Injury",
-      dataStyle: "hidden lg:table-cell",
+      dataStyle: "hidden lg:table-cell px-6 py-2 lg:py-4 ",
       headerStyle:
-        "px-6 py-3 text-[13px] text-left truncate hidden lg:table-cell",
+        "ppx-4 py-3 text-[13px] text-left truncate hidden lg:table-cell",
       renderCell: (params) => {
         return (
           <div>
